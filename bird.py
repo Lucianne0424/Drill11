@@ -41,8 +41,8 @@ class Bird:
     def update(self):
         self.frame = (self.frame + BIRD_FRAMES_PER_ACTION * BIRD_ACTION_PER_TIME * game_framework.frame_time) % 14
         self.x += self.dir * BIRD_SPEED_PPS * game_framework.frame_time
-        if self.x > 1600 - 50:
+        if self.x > 1600:
             self.dir *= (-1)
-        elif self.x < 0 + 50:
+        elif self.x < 0:
             self.dir *= (-1)
 
